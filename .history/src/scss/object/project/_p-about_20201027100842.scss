@@ -1,0 +1,55 @@
+/* ====================================
+Project
+==================================== */
+/* ABOUTセクションのスタイルを定義しています。
+------------------------------------ */
+.p-about {
+    margin-bottom: $space_3l;
+    text-align: center;
+
+    &__img {
+        width: 100%;
+
+        img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        @include mq() {
+            height: 100%
+        }
+    }
+
+    &__text {
+        width: 100%;
+
+        @include mq() {
+            width: 100%;
+        }
+    }
+
+    &__heading {
+        border-bottom: $border_light;
+        font-size: $font-size_xl;
+        padding-top: $space_xl;
+        padding-bottom: $space_m;
+
+        @include mq() {
+            padding-top: $space_m;
+        }
+        @include mq(sm) {
+            font-size: $font-size_m;
+        }
+    }
+
+    &__detail {
+        padding-top: $space_m;
+        font-size: $font-size_l;
+        line-height: 2rem;
+
+        @include mq(sm) {
+            font-size: $font-size_default;
+        }
+    }
+}

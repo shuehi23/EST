@@ -1,0 +1,22 @@
+/* ====================================
+Utility
+==================================== */
+/* 余白を定義しています。
+------------------------------------ */
+.u-between-margin {
+    margin-right: 3%;
+}
+
+.u-bottom-margin_xl {
+    margin-bottom: $space_xl;
+}
+
+.u-bottom-padding_xl {
+    padding-bottom: $space_xl;
+}
+.u-light-padding_l {
+    padding-right: $space_l;
+}
+.u-left-padding_l {
+    padding-left: $space_l;
+}

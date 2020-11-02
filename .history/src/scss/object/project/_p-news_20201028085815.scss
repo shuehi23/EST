@@ -1,0 +1,115 @@
+/* ====================================
+Project
+==================================== */
+/* ニュースのスタイルを定義しています。
+------------------------------------ */
+.p-news {
+    color: $color_white;
+    background-color: $color_green;
+    border-radius: $border-radius_normal;
+    font-size: $font-size_l;
+    height: 400px;
+    width: 100%;
+    margin-bottom: $space_3l;
+    padding: $space_xl;
+    overflow-y: scroll;
+    box-shadow: $box-shadow_outer;
+
+    @include mq(lg) {
+        width: 95%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    &__area {
+        border-bottom: $border_gray;
+        margin-bottom: $space_xl;
+        padding-bottom: $space-l;
+        @include mq(sm) {
+            padding-bottom: 0;
+        }
+    }
+
+    &__item {
+        height: 160px;
+        width: 100%;
+
+        @include mq(sm) {
+            flex-direction: column;
+            height: auto;
+        }
+
+        :hover {
+            .p-news__text {
+                text-decoration: underline;
+            }
+        }
+    }
+
+
+    &__img {
+        height: 160px;
+        width: 30%;
+
+        @include mq(sm) {
+            margin-bottom: 5px;
+            margin-right: 0!important;
+        }
+
+        img {
+            height: 160px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        @include mq(sm) {
+            width: 100%;
+        }
+    }
+
+    &__text {
+        width: 65%;
+        padding: $space_s;
+        display: block;
+
+        @include mq(sm) {
+            width: 100%;
+            padding: $space_s;
+        }
+    }
+
+    &__date {
+        margin-bottom: $space_m;
+    }
+
+    &__title {
+        width: 90px;
+        border-right: $border_gray;
+
+        @include mq() {
+            font-size: $font-size_m;
+            width: 60px;
+            justify-items: center;
+            border-right: none;
+            border-bottom: $border_white;
+            margin-bottom: $space_s;
+            display: block;
+        }
+    }
+
+    &__article {
+        font-size: $font-size_default;
+        padding-bottom: $space_m;
+        margin-bottom: $space_m;
+        position: relative;
+        display: block;
+
+        @include mq(sm) {
+            padding-bottom: 0px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

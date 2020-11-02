@@ -1,0 +1,80 @@
+/* ====================================
+リセットCSS
+==================================== */
+@import "~html5-reset";
+/* ====================================
+Foundation
+==================================== */
+/* Variable
+==================================== */
+// フォント
+@import "./foundation/variable/_f-font.scss";
+// 色
+@import "./foundation/variable/_f-color.scss";
+// 余白
+@import "./foundation/variable/_f-space.scss";
+// 幅
+@import "./foundation/variable/_f-site-width.scss";
+// ボーダー
+@import "./foundation/variable/_f-border.scss";
+// シャドウ
+@import "./foundation/variable/_f-box-shadow.scss";
+// ブレイクポイント
+@import "./foundation/variable/_f-breakpoint.scss";
+/* Base
+==================================== */
+// ページ全体のベーススタイル
+@import "./foundation/base/_f-base.scss";
+/* ====================================
+Layout
+==================================== */
+@import "./layout/_l-flexbox.scss";
+/* ====================================
+Component
+==================================== */
+// コンテンツの動き
+@import "object/component/_c-action.scss";
+// タイトル
+@import "object/component/_c-title.scss";
+// コンテナー
+@import "object/component/_c-container.scss";
+// ボタン
+@import "object/component/_c-btn.scss";
+// パネル
+@import "object/component/_c-panel.scss";
+// テーブル
+@import "object/component/_c-table.scss";
+/* ====================================
+Project
+==================================== */
+// ヘッダー
+@import "object/project/_p-header.scss";
+// ヒーローイメージ
+@import "object/project/_p-hero.scss";
+// NEWS
+@import "object/project/_p-news.scss";
+// ABOUT
+@import "object/project/_p-about.scss";
+// 画像スライダー
+@import "object/project/_p-slider.scss";
+// MENU
+@import "object/project/_p-menu.scss";
+// RESERVE
+@import "object/project/_p-reserve.scss";
+// ACCESS
+@import "object/project/_p-access.scss";
+// フッター
+@import "object/project/_p-footer.scss";
+/* ====================================
+Utility
+==================================== */
+// テキスト
+@import "object/utility/_u-text.scss";
+// float解除
+@import "object/utility/_u-clearfix.scss";
+// 余白
+@import "object/utility/_u-space.scss";
+
+
+
+

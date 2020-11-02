@@ -1,0 +1,23 @@
+/* ====================================
+Foundation
+==================================== */
+/* Variable
+==================================== */
+/* ブレイクポイントを定義しています。
+------------------------------------ */
+// マップ型変数
+$breakpoints: (
+	'sm': 'screen and (max-width: 414px)',
+	'md': 'screen and (max-width: 768px)',
+	'lg': 'screen and (max-width: 1000px)',
+	'xl': 'screen and (max-width: 1200px)',
+) !default;/*!defaultはすでに変数に値が入っていた場合(変数が競合していた場合)
+は何もせず、変数に値が入っていない時に割り当てられるもの*/
+
+// @includeで呼び出す時に、何も引数を指定しなければ768pxがブレイクポイントになる。
+@mixin mq($breakpoint: md) {
+	// map-get()で上記のマップ型の値を取得できる(foreachのようなもの)
+	@media #{map-get($breakpoints, $breakpoint)} {
+		@content;
+	}
+}

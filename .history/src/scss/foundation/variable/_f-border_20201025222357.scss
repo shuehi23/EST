@@ -1,0 +1,17 @@
+/* Variable
+==================================== */
+/* borderを定義しています。
+------------------------------------ */
+// 太い濃い青ボーダー
+$border_bold: solid 2px $color_main;
+// 細い濃い青ボーダー
+$border_light: solid 1px $color_main;
+// 薄い水色ボーダー
+$border_light_water: solid 2px $color_sub;
+// 太いグレーボーダー
+$border_gray_bold: solid 2px $color_gray;
+// グレーボーダー
+$border_gray: solid 1px $color_gray;
+
+// 角の丸み
+$border-radius_normal: 3px;

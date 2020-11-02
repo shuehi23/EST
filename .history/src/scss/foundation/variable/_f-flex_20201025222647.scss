@@ -1,0 +1,16 @@
+/* ====================================
+Layout
+==================================== */
+/* Flexboxについて定義しています。
+------------------------------------ */
+.l-flex {
+    display: flex; }
+  
+  @media screen and (max:md) {
+    .l-flex-order--1 {
+      order: 1; } }
+  
+  @media screen and (max:md) {
+    .l-flex-order--2 {
+      order: 2; } }
+  

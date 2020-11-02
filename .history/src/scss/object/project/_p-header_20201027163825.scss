@@ -1,0 +1,167 @@
+/* ====================================
+Project
+==================================== */
+/* ヘッダーのスタイルを定義しています。
+------------------------------------ */
+.p-header {
+    width: 100%;
+    height: 80px;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding-right: 3.33333%;
+    position: fixed;
+    z-index: 2;
+    font-family: $font-family_corp;
+    background: $color_white;
+
+    // スクロールした時の背景色
+    &.float-active {
+        transition: .2s;
+        background: $color_white_clear;
+        border-bottom: $border_gray;
+    }
+
+    &__logo {
+        position: relative;
+        left: 5%;
+        width: 170px;
+        @include mq(lg) {
+            left: 70px;
+            width: 140px;
+        }
+        @include mq() {
+            left: 50px;
+            width: 120px;
+        }
+    }
+
+    &__title {
+        font-family: "Slabo 27px", serif;
+        font-weight: bold;
+        color: $color_black_clear;
+        letter-spacing: 7px;
+        font-size: 40px;
+    }
+
+}
+
+// ナビゲーション
+.p-nav-menu {
+
+    &__content {
+        font-family: $font-family_corp;
+        font-size: $font-size_default;
+        color: $color_black;
+        white-space: pre;
+    }
+
+    &__item {
+        margin-right: $space_xl;
+    }
+
+    &__link {
+        letter-spacing: $space_s;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    // ウィンドウサイズmq以下の場合は隠す
+    @include mq(lg) {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: -100%;
+        background: rgba(255, 255, 255, 0.85);
+        height: 102vh;
+        width: 100%;
+        margin-right: initial;
+        padding-top: 50px;
+        // メニューが戻る時の動作
+        transition: transform 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+
+        // メニューをスライド表示させる
+        &.active {
+            transform: translateX(-100%);
+            transition: transform 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+            z-index: 2;
+        }
+
+        // ハンバーガーメニューを縦並びにする
+        &__content {
+            flex-direction: column;
+            align-items: center;
+            font-size: $font-size_xl;
+            padding-top: $space_3l;
+            white-space: nowrap;
+        }
+
+        &__item {
+            margin-right: initial;
+        }
+
+        &__link {
+            -webkit-font-smoothing: initial;
+            display: block;
+            padding: $space_xl;
+            text-align: center;
+        }
+    }
+}
+
+// メニュー開閉ボタン
+.p-nav-menu-trigger {
+    display: none;
+    @include mq(lg) {
+        display: inline-block;
+        right: 24px;
+    }
+    @include mq(sm) {
+        right: 0;
+    }
+    cursor: pointer;
+    height: 32px;
+    width: 40px;
+    position: relative;
+    z-index: 3;
+    transition: all .4s;
+    bottom: $space_xl;
+    &__border {
+        box-sizing: border-box;
+        background-color: $color_main;
+        border-radius: 4px;
+        display: inline-block;
+        height: 1px;
+        width: 100%;
+        position: absolute;
+        transition: transform .6s ease-in-out, top .5s ease;
+
+        &:nth-of-type(1) {
+            top: 10px;
+        }
+
+        &:nth-of-type(2) {
+            top: 22px;
+        }
+
+        &:nth-of-type(3) {
+            bottom: -2px;
+        }
+    }
+
+    &.active &__border {
+        &:nth-of-type(1) {
+            transform: translateY(12px) rotate(-45deg);
+        }
+
+        &:nth-of-type(2) {
+            opacity: 0;
+        }
+
+        &:nth-of-type(3) {
+            transform: translateY(-10px) rotate(45deg);
+        }
+
+    }
+}

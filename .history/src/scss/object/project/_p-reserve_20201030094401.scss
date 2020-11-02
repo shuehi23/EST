@@ -1,0 +1,89 @@
+/* ====================================
+Project
+==================================== */
+/* RESERVEセクションのスタイルを定義しています。
+------------------------------------ */
+.p-reserve {
+    margin-bottom: $space_3l;
+
+    @include mq() {
+        padding-bottom: $space_xl;
+    }
+
+    &__select {
+        background-color: $color_white;
+        border: 0;
+        outline: $border_gray;
+        color: $color_main;
+        height: 30px;
+
+        @include mq() {
+            width: 100%;
+        }
+    }
+
+    &__form {
+        background-color: $color_white;
+        border: $border_gray;
+        padding: $space_s;
+        color: $color_main;
+
+        @include mq() {
+            width: 100%;
+        }
+
+        & .i-error {
+            border-color: deeppink;
+            background-color: $color_white;
+        }
+
+    }
+
+    &__people {
+        width: 61px;
+
+        @include mq() {
+            width: calc(100% - 20px);
+        }
+
+    }
+
+    // &__msgArea {
+    //     font-size: $font-size_m;
+    //     margin-top: $space_s;
+    //     color: $color_red;
+    // }
+
+    &__confirm {
+        height: 30px;
+        margin-bottom: $space_xxl;
+        text-align: center;
+
+        @include mq() {
+            height: initial;
+        }
+    }
+
+    @include mq() {
+        .c-table {
+            flex-direction: column;
+
+            &__heading {
+                width: 100%;
+                text-align: left;
+            }
+
+            &__data {
+                border-left: initial;
+                padding-left: initial;
+                width: 100%;
+                padding-top: $space_s;
+                white-space: nowrap;
+            }
+        }
+
+        & .u-bottom-padding_xl {
+            padding-bottom: initial;
+        }
+    }
+}

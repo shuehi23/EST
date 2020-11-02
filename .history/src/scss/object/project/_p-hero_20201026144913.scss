@@ -1,0 +1,25 @@
+/* ====================================
+Project
+==================================== */
+/* ヒーローイメージのスタイルを定義しています。
+------------------------------------ */
+.p-hero {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-image: url("../dist/img/hero_4.jpg");
+    color: $color_white;
+    font-family: $font-family_corp;
+    font-size: $font-size_3l;
+    justify-content: center;
+    height: 100vh;
+
+    @include mq(sm) {
+        background-attachment: initial;
+    }
+
+    .c-container {
+        position: relative;
+    }
+}

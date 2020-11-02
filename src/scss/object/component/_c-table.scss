@@ -1,0 +1,30 @@
+/* ====================================
+Component
+==================================== */
+/* tableのスタイルを定義しています。
+------------------------------------ */
+.c-table {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: $font-size_l;
+    width: 620px;
+    margin: 0 auto;
+    @include mq(){
+        width: 100%;
+    }
+    &__heading {
+        display: table-cell;
+        width: 40%;
+        padding-top: $space_xl;
+        padding-right: $space_xl;
+        text-align: right;
+        }
+
+    &__data {
+        display: table-cell;
+        border-left: $border_light;
+        width: 60%;
+        padding-top: $space_xl;
+        padding-left: $space_xl;
+    }
+}

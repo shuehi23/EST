@@ -1,0 +1,25 @@
+/* Base
+   ==================================== */
+   html {
+    box-sizing: border-box; }
+  
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit; }
+  
+  a {
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none; }
+  
+  body {
+    background-color: #fefefe;
+    color: black;
+    font-family: 'Rowdies', cursive; }
+  
+  input, select {
+    outline: none; }
+  
+  select {
+    cursor: pointer; }
