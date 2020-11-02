@@ -1,5 +1,6 @@
 # タイトル 
 EST(Enjoy Sports Tour)
+
 https://shuhei23.sakura.ne.jp/EST/
 
 # 概要
@@ -11,6 +12,7 @@ HTML ,Sass(SCSS) ,Javascript(jQuery)
 
 # 制作について
 gulp、browserifyの導入から行いました。
+
 Flocssに基づいて製作しました。
 
 # 製作者
