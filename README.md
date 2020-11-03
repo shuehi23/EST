@@ -14,5 +14,6 @@ gulp、browserifyの導入から行いました。
 Flocssに基づいて製作しました。
 
 # 製作者
+[shuhei23](https://github.com/shuehi23)
 
 
