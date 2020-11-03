@@ -7,7 +7,7 @@ https://shuhei23.sakura.ne.jp/EST/
 
 # 開発環境・使用言語
 MAMP  
-HTML ,Sass(SCSS) ,Javascript(jQuery)
+HTML ,Sass(SCSS) ,Javascript(jQuery), PHP
 
 # 制作について
 gulp、browserifyの導入から行いました。  
